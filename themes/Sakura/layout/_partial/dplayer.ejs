@@ -1,0 +1,84 @@
+<% if (theme.dplayer && theme.dplayer.enable){ %>
+  <!-- <div id="dplayer"></div> -->
+  <script src="<%- theme.CDN.hls %>"></script>
+  <script src="<%- theme.CDN.dplayer %>"></script> 
+  <!-- <script>
+    const _list = JSON.parse('<%- JSON.stringify(theme.dplayer.playlist) %>');
+    const _link = `<%- theme.CDN.default %>/video/${_list.Movie[0].video.class}/${_list.Movie[0].video.title}`
+    // console.log(_list,_list.Movie,`${_link}/pic.jpg`)
+    console.log(_list,_link)
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        autoplay: '<%- theme.dplayer.autoplay %>',
+        theme: '<%- theme.dplayer.theme %>',
+        loop: '<%- theme.dplayer.loop %>',
+        lang: '<%- theme.dplayer.lang %>',
+        screenshot: '<%- theme.dplayer.screenshot %>',
+        hotkey: '<%- theme.dplayer.hotkey %>',
+        preload: '<%- theme.dplayer.preload %>',
+        logo: '<%- theme.dplayer.logo %>',
+        volume: '<%- theme.dplayer.volume %>',
+        mutex: '<%- theme.dplayer.mutex %>',
+        video: {
+          url: `${_link}/video.m3u8`,
+          pic: `${_link}/pic.jpg`,
+          type: 'customHls',
+          customType: {
+            customHls: function (video, player) {
+                const hls = new Hls();
+                hls.loadSource(video.src);
+                hls.attachMedia(video);
+            },
+          },
+        },
+        subtitle: {
+        url: 'dplayer.vtt',
+        type: 'webvtt',
+        fontSize: '25px',
+        bottom: '10%',
+        color: '#b7daff',
+        },
+        danmaku: {
+          id: '9E2E3368B56CDBB4',
+          api: 'https://dplayer.alone88.cn/',
+          token: 'tokendemo',
+          maximum: 1000,
+          addition: ['https://dplayer.alone88.cn//v3/bilibili?aid=797072183'],
+          user: 'DIYgod',
+          bottom: '15%',
+          unlimited: true,
+        },
+        contextmenu: [
+          {
+              text: 'custom1',
+              link: 'https://github.com/DIYgod/DPlayer',
+          },
+          {
+              text: 'custom2',
+              click: (player) => {
+                  console.log(player);
+              },
+          },
+        ],
+        highlight: [
+          {
+            time: 20,
+            text: '这是第 20 秒',
+          },
+          {
+            time: 120,
+            text: '这是 2 分钟',
+          },
+        ],
+      });
+    $(document).on('pjax:start', function () {
+      console.log("dplayer","pjax")
+      if (window.dplayers) {
+          for (let i = 0; i < window.dplayers.length; i++) {
+              window.dplayers[i].destroy();
+          }
+          window.dplayers = [];
+      }
+    });
+  </script> -->
+<% } %>

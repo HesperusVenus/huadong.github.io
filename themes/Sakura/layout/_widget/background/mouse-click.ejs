@@ -1,0 +1,17 @@
+<% if (theme.afireworks && theme.fireworks.enable){ %>
+  <script src="<%- theme.CDN.fireworks %>"></script>
+<% } %>
+
+<% if (theme.click_heart && theme.click_heart.enable){ %>
+  <script src="<%- theme.CDN.click_heart %>"></script>
+<% } %>
+
+<% if (theme.ClickShowText && theme.ClickShowText.enable){ %>
+  <script>
+    var clickShowText_config = {
+      _text: "<%- theme.ClickShowText.text %>",
+      _fontSize: "<%- theme.ClickShowText.fontSize %>"
+    }
+  </script>
+  <script src="<%- theme.CDN.ClickShowText%>"></script>
+<% } %>

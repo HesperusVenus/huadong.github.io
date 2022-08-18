@@ -1,0 +1,118 @@
+<link
+  href="https://cdn.jsdelivr.net/gh/Fog-Forest/bilibili@1.7.2/col.min.css"
+  rel="stylesheet"
+/>
+<link
+  href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/css/video.css" />
+<div class="pattern-center-blank"></div>
+<div class="pattern-center">
+  <div class="pattern-attachment-img">
+    <img
+      data-src="<%= __(page.photos) %>"
+      class="lazyload"
+      onerror="imgError(this,3)"
+      style="width: 100%; height: 100%; object-fit: cover; pointer-events: none"
+    />
+  </div>
+  <header class="pattern-header">
+    <h1 class="cat-title"><%- page.title %></h1>
+  </header>
+</div>
+<div id="content" class="site-content">
+  <header class="page-header">
+    <h1 class="cat-title">电影</h1>
+    <span class="cat-des"><p>源于生活，高于生活，还原生活</p> </span>
+  </header>
+  <div id="m-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div style="overflow: hidden">
+          <div id="bilibiliMovie" class="row"></div>
+          <div id="next">. NEXT .</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.jQuery ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"><\/script>'
+      );
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var pagenum = 1;
+      var limit = 12; //单页展示数
+      addClassActive();
+      GetMovieData(limit, 1);
+      $("div#next").click(function () {
+        GetMovieData(limit, ++pagenum);
+        console.log("第 " + pagenum + " 页");
+      });
+      $("ul#nav-movie__tabs li").click(function () {
+        $("#bilibiliMovie").remove();
+        GetMovieData(limit, 1);
+      });
+    });
+    function addClassActive() {
+      $("#m-container .nav li:first-child").addClass("active");
+      $("#m-container .tab-pane:first-child").addClass("active");
+    }
+    function GetMovieData(limit, page) {
+      $.ajax({
+        type: "get",
+        datatype: "json",
+        url: `/json/movie.json`,
+        data: {
+          limit: limit, // 每页个数
+          page: page, // 页号,第一页 page = 0
+        },
+        dataType: "json",
+        beforeSend: function () {
+          $("#bilibiliMovie").append(
+            '<img class="loading_dsasd" src="https://cdn.jsdelivr.net/gh/Fog-Forest/Steam-page@1.2/json/loading.svg">'
+          );
+        },
+        complete: function () {
+          $(".loading_dsasd").remove();
+        },
+        success: function (data) {
+          var i;
+          if (data.total_page == page && page == 0) {
+            $("div#next").hide();
+          } else if (data.total_page == page) {
+            // 判断是否最后一页
+            $("div#next").text("真的没有更多了哦~");
+          }
+          // 分页数据长度
+          var vlength =
+            page == data.total_page ? data.data.length : page * limit;
+          for (i = (page - 1) * limit; i < vlength; i++) {
+            $("#bilibiliMovie").append(
+              '<div class="bangumi-item col-md-4 col-lg-3 col-sm-6"><a class="no-line bangumi-link" href="https://www.bilibili.com/bangumi/play/ss' +
+                data.data[i].id +
+                '/ " target="_blank"><div class="bangumi-banner"><img class="lazy" src="https://cdn.jsdelivr.net/gh/Fog-Forest/Steam-page@1.2/json/loading.svg" data-src="' +
+                data.data[i].image_url +
+                '"><div class="bangumi-des"><p>' +
+                data.data[i].evaluate +
+                '</p></div></div><div class="bangumi-content"><h3 class="bangumi-title">' +
+                data.data[i].title +
+                "</h3></div></a></div>"
+            );
+            // console.log(data); // 查看AJAX获取的数据
+          }
+          $("img.lazy").lazyload(); // 图片懒加载
+        },
+        error: function (data) {
+          alert(data.result);
+        },
+      });
+    }
+  </script>
+</div>

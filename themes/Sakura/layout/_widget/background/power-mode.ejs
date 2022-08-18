@@ -1,0 +1,8 @@
+<% if (theme.activate_power_mode && theme.activate_power_mode.enable){ %>
+  <script src="<%- theme.CDN.activate_power_mode %>"></script>
+  <script>
+    POWERMODE.colorful = "<%- theme.activate_power_mode.colorful %>";
+    POWERMODE.shake = "<%- theme.activate_power_mode.shake %>";
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+<% } %>

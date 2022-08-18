@@ -1,0 +1,51 @@
+<%
+  var essay_title,essay_cover;
+  if( page.category === 'daily' ){
+    essay_cover = theme.bg_cover.imgs.essay.menus.daily.url
+    essay_title = theme.bg_cover.imgs.essay.menus.daily.title
+  }else if( page.category === 'anime' ){
+    essay_cover = theme.bg_cover.imgs.essay.menus.anime.url;
+    essay_title = theme.bg_cover.imgs.essay.menus.anime.title;
+  }else if( page.category === 'game' ) {
+    essay_cover = theme.bg_cover.imgs.essay.menus.game.url;
+    essay_title = theme.bg_cover.imgs.essay.menus.game.title;
+  }else if( page.category === 'other' ) {
+    essay_cover = theme.bg_cover.imgs.essay.menus.other.url;
+    essay_title = theme.bg_cover.imgs.essay.menus.other.title;
+  }else {
+    essay_cover = theme.bg_cover.imgs.essay.url;
+    essay_title = theme.bg_cover.imgs.essay.title;
+  }
+%>
+<div class="pattern-center-blank"></div>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img data-src="<%= __(essay_cover) %>" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+  </div>
+  <header class="pattern-header ">
+    <h1 class="cat-title"><%= __(essay_title) %></h1>
+  </header>
+</div>
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <%- partial('_partial/category-archive', {pagination: 2, index: true}) %>
+      <div class="clearer">
+      </div>
+    </main>
+    <!-- <% if (page.total > 1){ %>
+      <nav class="navigator">
+        <% var prev_text = __('prev');var next_text = __('next');%>
+        <%- paginator({
+          prev_text: prev_text,
+          next_text: next_text
+        }) %>
+      </nav>
+    <% } %> -->
+    <% if (page.total > 1 && page.next_link){ %>
+      <div id="pagination"><a href="<%- url_for(page.next_link) %>" class="">Previous</a></div>
+    <% } %>
+  </div>
+</div>
+
+<!-- <%- partial('_partial/category-archive', {pagination: config.category, index: true}) %> -->

@@ -1,0 +1,40 @@
+<% if (theme.live2d && theme.live2d.enable){ %>
+  <!-- 引用看板娘交互所需的样式表 -->
+  <link href="<%- theme.CDN.live2d_piocss %>" rel='stylesheet' type='text/css'/>
+   <div class="pio-container <%- theme.live2d.position %>">
+    <div class="pio-action"></div>
+    <div class="pio-btn"></div>
+    <canvas id="pio" width="<%- theme.live2d.width %>" height="<%- theme.live2d.height %>"></canvas>
+  </div>
+  <!-- 引用 Live2D 核心组件 -->
+  <script src="<%- theme.CDN.live2d %>"></script>
+  <!-- 引用看板娘交互组件 -->
+  <script src="<%- theme.CDN.live2d_piojs %>"></script>
+  <!-- Live2D看板娘设置 -->
+  <script>
+    const live2d_model = "<%- theme.CDN.live2d_model %>/<%- theme.live2d.model %>/live2d_model.json"
+    var pio = new Paul_Pio({
+      "mode": "<%- theme.live2d.mode %>",
+      "hidden": "<%- theme.live2d.hidden %>",
+      "content": {
+          "welcome": ["欢迎来到Hesperus的小宇宙！", "今天天气不错，一起来玩吧！", "博主每天都有些折腾记录，欢迎前往他的小窝阅读~"],
+          "touch": ["你这个绅士！", "别碰我！"],
+          "home": "点击这里回到首页！",
+          "link": "https://paul.ren/about",
+          "close": "QWQ 有缘再会吧~",
+          "referer": "你通过 %t 来到了这里",
+          "custom": [
+              {"selector": ".comment-form", "text": "欢迎参与本文评论，别发小广告噢~"},
+              {"selector": ".home-social a:last-child", "text": "在这里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"},
+              {"selector": "#pio", "type": "", "text": ["你在干什么？", "再摸我就报警了！", "HENTAI!", "不可以这样欺负我啦！","干嘛动我呀！小心我咬你！","110吗！这里有个怪蜀黍一直在戳我 (｡ ́︿ ̀｡)","再碰我就告诉Hesperus!!!"]},
+          ]
+      },
+      "night": "this.night()",
+      "model": [ live2d_model ]
+  });
+  // DIY设置模态框位置
+  document.querySelector('.pio-container .pio-dialog').style.top = "<%- theme.live2d.dialog %>"
+  </script> 
+<% } %>
