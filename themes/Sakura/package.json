@@ -1,5 +1,5 @@
 {
-  "name": "hexo-theme-jsimple",
+  "name": "hexo-theme-sakura",
   "version": "0.0.2",
   "description": "Simple three column theme for Hexo.Inspired by JianShu.com",
   "license": "MIT",
@@ -9,20 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tangkunyin/hexo-theme-jsimple.git"
+    "url": "git+https://github.com/tangkunyin/hexo-theme-sakuraX.git"
   },
   "keywords": [
-    "Simple",
-    "Three Column",
-    "Jian Shu",
     "Hexo"
   ],
   "bugs": {
-    "url": "https://github.com/tangkunyin/hexo-theme-jsimple/issues"
+    "url": "https://github.com/HesperusVenus/hexo-theme-sakuraX/issues"
   },
   "author": {
-    "name": "tangsir",
-    "url": "https://www.tangkunyin.com",
-    "email": "iam@tangkunyin.com"
+    "name": "hehuadong",
+    "url": "https://www.hehuadong.com",
+    "email": "1210633716@qq.com"
   }
 }

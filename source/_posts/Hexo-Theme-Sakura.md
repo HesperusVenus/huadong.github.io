@@ -10,7 +10,7 @@ comments: true
 # tec: Sakura-Theme
 tags: 
  - /
- - software
+ - tools
  - other
 keywords: Sakura
 description: hexo-sakura主题使用教程

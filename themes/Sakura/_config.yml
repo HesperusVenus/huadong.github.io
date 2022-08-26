@@ -27,8 +27,9 @@ menus:
   技术: { path: /tec, fa: fa-code-fork faa-vertical,
     submenus: { 
       技术 · 编程: { path: /tec/code, fa: fa-code },
-      技术 · 软件: { path: /tec/software, fa: fa-th-large }, 
+      技术 · 工具: { path: /tec/tools, fa: fa-th-large }, 
       技术 · 杂谈: { path: /tec/other, fa: fa-book }, 
+      博客 · Hexo: { path: /tec/hexo, fa: fa-book }, 
     },
   }
   随笔: { path: /essay, fa: fa-pencil faa-shake,
@@ -70,7 +71,7 @@ bg_cover:
     tec: { url: https://view.amogu.cn/images/2020/08/26/20200531205547.jpg, title: 技术,
       menus: { 
         code: { url: https://view.amogu.cn/images/2020/08/26/H6d670440b3db43c9b5bf0faa923a79ccp.jpg, title: 技术 · 编程 },
-        software: { url: https://view.amogu.cn/images/2020/08/26/H0181c1c54e564d7c97cc6b68c1bcf54cS.jpg, title: 技术 · 软件 },
+        tools: { url: https://view.amogu.cn/images/2020/08/26/H0181c1c54e564d7c97cc6b68c1bcf54cS.jpg, title: 技术 · 工具 },
         other: { url: https://view.amogu.cn/images/2020/08/26/Hf742f29e16b64d3c822f0b7de5926bdeF.jpg, title: 技术 · 杂谈 },
       }
     }
@@ -149,6 +150,10 @@ canvas_ribbon_piao:
   enable: true
   mobile: false # false 手機端不顯示 true 手機端顯示
 
+ # 流星背景特效
+meteor:
+  enable: true
+
 # startdash url, title, desc img
 startdash: 
   - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
@@ -176,7 +181,7 @@ msocial:
   qq: {url: https://wpa.qq.com/msgrd?v=3&uin=1210633716&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
 
 donate:
-  paypal: https://www.paypal.me/hojuncn
+  # paypal: https://www.paypal.me/hojuncn
   alipay: /img/custom/donate/AliPayQR.jpg
   wechat: /img/custom/donate/WeChanQR.jpg
   wechatSQ: /img/custom/donate/WeChanSQ.jpg
@@ -272,6 +277,9 @@ CDN:
   fireworks: /js/third-party/fireworks.js
   click_heart: /js/third-party/click_heart.js
   ClickShowText: /js/third-party/ClickShowText.js
+
+  # 流星背景特效
+  meteor: /js/third-party/bg_meteor.js
 
   #live2d
   live2d: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@master/live2d.js

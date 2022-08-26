@@ -1125,31 +1125,22 @@ em,
 i {
     font-style: italic
 }
-
+/* makedown 引用符 > 样式 */
 blockquote {
     margin: 0;
-    padding: 30px 60px;
-    position: relative
-}
-
-blockquote:before {
-    content: "\f10d" !important;
-    font-size: 3rem;
-    position: absolute;
-    top: -25px;
-    left: 12px;
-    color: #2add9c;
-    font-family: FontAwesome
-}
-
-blockquote:after {
-    content: '\f10e' !important;
-    font-size: 3rem;
-    position: absolute;
-    bottom: -25px;
-    right: -5px;
-    color: #2add9c;
-    font-family: FontAwesome
+    padding: 15px!important;
+    border-left: 3px solid #2add9c!important;
+    border-right: none!important;
+    border-top: none!important;
+    border-bottom: none!important;
+    background-color: #f7f7f7!important;
+    background-image: linear-gradient(180deg ,#fff,#f5f5fa)!important;
+    --text-opacity: 1!important;
+    color: #484c7a!important;
+    box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%),0 1px 3px 0 rgb(93 100 148 / 6%)!important;
+    margin: 10px 5px 10px 0!important;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 blockquote p {
@@ -1283,7 +1274,7 @@ img {
 
 table {
     margin: 0 0 1.5em;
-    width: 100%
+    width: 100%;
 }
 
 button,
@@ -2766,13 +2757,13 @@ i.iconfont.hotpost {
 }
 
 .entry-content code {
-    background: rgba(254, 250, 199, 1);
-    color: #e67474;
+    background: rgba(189,220,247,0.42);
+    color: #50BCB6;
     word-break: break-word;
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
-    padding: 2px;
+    padding: 4px;
     text-shadow: none;
-    border-radius: 5px
+    border-radius: 4px
 }
 
 .entry-content a {
@@ -2783,6 +2774,43 @@ i.iconfont.hotpost {
 .entry-content a:hover {
     color: #2add9c;
     text-decoration: underline #2add9c
+}
+
+.entry-content .table-wrapper table {
+    box-sizing: border-box;
+    width: 100%!important;
+    background-color: #fff;
+    border: 1px solid #dfe3ec;
+    font-size: 14px;
+    color: #222;
+    margin: 0 0 10px;
+    padding: 0;
+    border-right: 0;
+    border-bottom: 0;
+    display: table!important;
+    border-collapse: initial!important;
+    font-family:"Lexend","Noto Sans SC",sans-serifs;
+}
+
+.entry-content .table-wrapper table th {
+    border-bottom: 1px solid #dfe3ec;
+    border-right: 1px solid #dfe3ec;
+    background-color: #eef0f6;
+    text-align: left;
+    overflow: hidden;
+    padding: 0 18px;
+    line-height: 30px;
+    min-width: 100px;
+}
+.entry-content .table-wrapper table td {
+    border-bottom: 1px solid #dfe6ec;
+    border-right: 1px solid #dfe3ec;
+    min-width: 0;
+    padding: 0px 20px;
+    line-height: 30px;
+}
+.entry-content .table-wrapper table tr:hover {
+    background: rgba(236, 240, 241,0.5)
 }
 
 h1.entry-title {
