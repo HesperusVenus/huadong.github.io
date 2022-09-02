@@ -11,7 +11,7 @@ authorDesc:
 comments: true
 tags: 
   - /
-  - hexo
+  - blog
 keywords: Hexo
 description: 炫酷的样式，多样化的功能！买定离手，CV拿走|●´∀`|σ
 ---

@@ -11,7 +11,7 @@ authorDesc:
 comments: true
 tags: 
   - /
-  - hexo
+  - blog
 keywords: Hexo
 description: Hexo 快速建站不等待ψ(｀∇´)ψ
 ---

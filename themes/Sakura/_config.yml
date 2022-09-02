@@ -29,7 +29,7 @@ menus:
       技术 · 编程: { path: /tec/code, fa: fa-code },
       技术 · 工具: { path: /tec/tools, fa: fa-cog }, 
       技术 · 杂谈: { path: /tec/other, fa: fa-twitch }, 
-      博客 · Hexo: { path: /tec/hexo, fa: fa-book }, 
+      技术 · 博客: { path: /tec/blog, fa: fa-book }, 
     },
   }
   随笔: { path: /essay, fa: fa-pencil faa-shake,

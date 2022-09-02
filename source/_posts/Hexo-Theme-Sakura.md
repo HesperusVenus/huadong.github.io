@@ -10,7 +10,7 @@ comments: true
 # tec: Sakura-Theme
 tags: 
  - /
- - hexo
+ - blog
 keywords: Sakura
 description: hexo-sakura主题使用教程
 photos: https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png

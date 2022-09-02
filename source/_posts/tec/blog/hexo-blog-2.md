@@ -11,7 +11,7 @@ authorDesc:
 comments: true
 tags: 
   - /
-  - hexo
+  - blog
 keywords: Hexo
 description: Hexo 选择巴适的主题 (￣▽￣)~*
 ---
