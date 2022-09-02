@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Hexo 博客搭建教程 Ⅰ | Hua Dong&#39;s blog</title>
+  <title itemprop="name">Hexo 博客搭建教程 Ⅱ | Hua Dong&#39;s blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico?">
   
@@ -262,9 +262,9 @@
                       </li>
                     
                       <li>
-                        <a href="/tec/hexo">
+                        <a href="/tec/blog">
                           <i class="fa fa-book" aria-hidden="true"></i>
-                          博客 · Hexo
+                          技术 · 博客
                         </a>
                       </li>
                     
@@ -428,7 +428,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Hexo 博客搭建教程 Ⅰ</h1>
+      Hexo 博客搭建教程 Ⅱ</h1>
       <p class="entry-census">
         <span>
           <a href="hehuadong.cn">
@@ -454,38 +454,143 @@
         <!--<div class="toc-"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<p>前言: Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页，即把用户的markdown文件，按照指定的主题解析成静态网页。<br>学习 Markdown 语法可以看 Github 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/cn/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github">基本撰写和格式语法</a></p>
-</blockquote>
-<h3 id="安装-Git-和-Node-js"><a href="#安装-Git-和-Node-js" class="headerlink" title="安装 Git 和 Node.js"></a>安装 Git 和 Node.js</h3><ul>
-<li>Git<br>从 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载ss<br>完成后用 <code>git --version</code> 命令检查，有提示即安装正确</li>
-<li>Node.js<br>从 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a> 下载 Node.js，选择 LTS 稳定版本，安装一路确认即可<br>完成后用 <code>node -v</code> 和 <code>npm -v</code> 两个命令检查，有提示即安装正确</li>
-</ul>
-<h3 id="Github建库"><a href="#Github建库" class="headerlink" title="Github建库"></a>Github建库</h3><p>如果你希望你的站点部署到域名 <code>&lt;name&gt;.github.io</code> 访问，新建一个仓库，命名为 <code>&lt;name&gt;.github.io</code>；<br>远程项目拉取到本地：<code>git clone https://github.com/xxx/&lt;name&gt;.github.io.git</code></p>
-<blockquote>
-<p>GitHub新建项目默认分支main,可创建release分支,默认分支切换至release<br><code>release</code>: hexo建站的项目文件;<br><code>main</code>: 用于发布,打包文件资源指向到该分支, GitHub Pages配置站点页面,分支也需要切换至main分支,配置个人域名即可访问;</p>
-</blockquote>
-<h3 id="Hexo建站"><a href="#Hexo建站" class="headerlink" title="Hexo建站"></a><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>建站</h3><p>输入命令<code>npm install -g hexo-cli</code>,检查安装<code>hexo -v</code>，进入<code>&lt;name&gt;.github.io</code>文件中，执行<code>hexo init</code>初始化新建一个网站。</p>
-<p><b>hexo初始化目录结构：</b></p>
-<pre><code class="bash">&lt;root&gt;
-├── _config.landscape.yml # 默认主题landscape配置文件；若配置不同的主题,可删除该文件
-├── _config.yml    # 站点配置文件
-├── package.json   # hexo依赖,landscape依赖不要删除,hexo默认主题,删除即报错
-├── scaffolds      # 模版文件夹
-│   ├── draft.md
-│   ├── page.md
-│   └── post.md
-├── source         # 资源文件夹,即makedown文章存放处
-│   └── _posts
-│       └── hello-world.md
-├── themes         # 主题文件夹          
-└── yarn.lock
+          <h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>首先在<font color="#2add9c"><a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a></font>选择一个主题<br>以<a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>主题为参考</p>
+<p> · 进入<code>themes</code>文件夹: <code>cd theme</code><br> · 克隆主题到<code>themes</code>文件夹: <code>git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex</code><br> · 修改根目录下的_config.yml配置主题: <code>theme: landscape</code>  ➜  <code>theme: particlex</code><br> · 生成静态资源，启动服务: <code>hexo g</code> <code>hexo s</code><br> · 访问页面<code>localhost:4000</code> 默认端口号: 4000；s 当端口号被占用，可使用命令: <code>hexo s -p 3000</code><br> · 切换主题：<code>themes</code>文件夹下安装多个主题，只需修改根目录下<code>_config.yml</code> <font color="#2add9c">theme</font> 参数即可切换主题</p>
+<h3 id="主题目录介绍"><a href="#主题目录介绍" class="headerlink" title="主题目录介绍"></a>主题目录介绍</h3><pre><code class="bash">&lt;root&gt;
+|---public # 静态网页文件
+|---source # 资源文件夹,md文章存放处（不要和主题文件夹下的source弄混）
+|---themes # 主题
+    |---&lt;theme-name&gt;
+        |---layout # 布局文件
+        |   |---layout.ejs # 网页的基本布局
+        |---source # 主题资源文件，里面的内容会生成到静态文件下
 </code></pre>
-<p>Ps: 注意hexo版本安装对应node版本</p>
-<h3 id="Hexo的常用命令"><a href="#Hexo的常用命令" class="headerlink" title="Hexo的常用命令"></a>Hexo的常用命令</h3><p>  · 生成静态资源： <code>hexo g</code> 或  <code>hexo generate</code><br>  · 清除静态资源： <code>hexo cl</code> 或 <code>hexo clean</code><br>  · 本地运行： <code>hexo s</code> 或 <code>hexo server</code><br>  · 部署到网站： <code>hexo d</code> 或 <code>hexo deploy</code><br>  · 生成静态文件并部署到网站： <code>hexo d -g</code> 或 <code>hexo g -d</code><br>  · 创建新文章：<code>hexo new &lt;post-name&gt;</code>  <code>&lt;post-name&gt;</code>为文件名</p>
-<blockquote>
-<p>个人习惯：因自建菜单目录较多，本地写好文章，放到对应的文件夹下归档，执行上述命令！</p>
-</blockquote>
+<h3 id="EJS模板语言"><a href="#EJS模板语言" class="headerlink" title="EJS模板语言"></a><a target="_blank" rel="noopener" href="https://ejs.bootcss.com/#promo">EJS</a>模板语言</h3><p>EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。<br>hexo初始化建站，默认安装依赖<code>hexo-renderer-ejs</code> ,<code>hexo-renderer-stylus</code><br>一般主题使用什么模板语言开发，博主使用对应的模板语言，减少不必要的代码重构</p>
+<pre><code class="ejs">// 基础使用
+&lt;% if (user) &#123; %&gt;
+  &lt;h2&gt;&lt;%= user.name %&gt;&lt;/h2&gt;
+&lt;% &#125; %&gt;
+
+/*--  导入文件  --*/
+&lt;%- partial(&#39;partial/header&#39;) %&gt;
+&lt;div id=&quot;content&quot;&gt;Home page&lt;/div&gt;
+</code></pre>
+<p><b>常用标签含义</b></p>
+<div class="table-wrapper">
+
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>含义、作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;%</td>
+<td>‘脚本’ 标签，用于流程控制，无输出。</td>
+</tr>
+<tr>
+<td>&lt;%_</td>
+<td>删除其前面的空格符</td>
+</tr>
+<tr>
+<td>&lt;%&#x3D;</td>
+<td>输出数据到模板（输出是转义 HTML 标签）</td>
+</tr>
+<tr>
+<td>&lt;%-</td>
+<td>输出非转义的数据到模板</td>
+</tr>
+<tr>
+<td>&lt;%#</td>
+<td>注释标签，不执行、不输出内容</td>
+</tr>
+<tr>
+<td>&lt;%%</td>
+<td>输出字符串 ‘&lt;%’</td>
+</tr>
+<tr>
+<td>%&gt;</td>
+<td>一般结束标签</td>
+</tr>
+<tr>
+<td>-%&gt;</td>
+<td>删除紧随其后的换行符</td>
+</tr>
+<tr>
+<td>_%&gt;</td>
+<td>将结束标签后面的空格符删除</td>
+</tr>
+</tbody></table>
+</div>
+
+<h3 id="自定义网站配置"><a href="#自定义网站配置" class="headerlink" title="自定义网站配置"></a>自定义网站配置</h3><p>打开博客根目录下的 <code>_config.yml</code>，下面是主要参数的介绍</p>
+<pre><code class="yaml">#----  站点  ----#
+title: # 标题
+subtitle: # 副标题
+description: # 描述
+keywords: # 关键字
+author: # 作者
+language: # 语言
+timezone: # 时区
+
+#----- 路由路径 -----#
+url: # 网址
+root: # 根目录
+permalink: # 文章链接格式
+permalink_defaults: # 链接默认值
+pretty_urls:
+  trailing_index: # 是否在永久链接中保留尾部的 index.html，设置为 false 时去除
+  trailing_html: # 是否在永久链接中保留尾部的 .html, 设置为 false 时去除 (对尾部的 index.html无效)
+
+#----- 文件目录  -----#
+source_dir: # 资源文件夹，这个文件夹用来存放内容
+public_dir: # 公共文件夹，这个文件夹用于存放生成的站点文件
+tag_dir: # 标签文件夹
+archive_dir:  # 归档文件夹
+category_dir: # 分类文件夹
+code_dir: # Include code 文件夹，source_dir 下的子目录
+i18n_dir: # 国际化（i18n）文件夹
+skip_render: # 跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 public 目录中 
+
+#------  文章  -------#
+new_post_name:  # 新文章的文件名
+default_layout:  # 预设布局
+titlecase: false # 标题转化为首字母大写
+external_link:
+  enable:  # 开启，新的标签页打开外部链接
+  field:  # 适用于整个站点, 设置 post, 仅对文章（post）生效
+  exclude:  # 需要排除的域名。主域名和子域名如 www 需分别配置
+filename_case: 0 # 把文件名称转换为 (1) 小写或 (2) 大写
+
+#-------  首页文章配置  -------#
+index_generator:
+  per_page:  # 每页显示的帖子。(0 =禁用分页)
+  order_by:  # 文章的顺序。(默认按日期递减排序)
+
+#------  日期 / 时间格式  ------#
+date_format: YYYY-MM-DDs
+time_format: HH:mm:ss
+
+#------  分页  ------#
+per_page: # 每页显示的文章量 (0 = 关闭分页功能)
+pagination_dir: # 分页目录
+
+#----  包括 / 不包括目录或文件  ----#
+include: # 包括隐藏文件
+exclude: # 排除文件/文件夹
+ignore: # 忽略文件/文件夹
+
+#------  主题  -----#
+theme: #主题
+
+#------  部署  -----#
+deploy:
+  type: # 部署方式
+  repo: # 部署仓库
+    coding: # 部署的仓库地址
+  branch: # 部署分支
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -517,7 +622,7 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/tec/hexo/hexo-blog-2/" rel="prev">
+            <a href="/tec/blog/hexo-blog-3/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
               </div>
@@ -525,7 +630,7 @@
               Previous Post</span>
               <div class="info">
                 <h3>
-                Hexo 博客搭建教程 Ⅱ</h3>
+                Hexo 博客搭建教程 Ⅲ</h3>
                 <hr>
               </div>
             </a>
@@ -535,7 +640,7 @@
           
             <div class="post-nepre half next">
           
-            <a href="/tec/other/other_01%20copy%2010/" rel="next">
+            <a href="/tec/blog/hexo-blog-1/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
               </div>
@@ -543,7 +648,7 @@
               Next Post</span>
               <div class="info">
                 <h3>
-                技术 · 杂谈 ～ 测试版_02</h3>
+                Hexo 博客搭建教程 Ⅰ</h3>
                 <hr>
               </div>
             </a>
@@ -941,9 +1046,9 @@ $(document).ready(function() {
               </li>
             
               <li>
-                <a href="/tec/hexo">
+                <a href="/tec/blog">
                   <i class="fa fa-book" aria-hidden="true"></i>
-                  博客 · Hexo
+                  技术 · 博客
                 </a>
               </li>
             

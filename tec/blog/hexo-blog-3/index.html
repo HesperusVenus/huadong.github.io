@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Hexo 博客搭建教程 Ⅱ | Hua Dong&#39;s blog</title>
+  <title itemprop="name">Hexo 博客搭建教程 Ⅲ | Hua Dong&#39;s blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico?">
   
@@ -262,9 +262,9 @@
                       </li>
                     
                       <li>
-                        <a href="/tec/hexo">
+                        <a href="/tec/blog">
                           <i class="fa fa-book" aria-hidden="true"></i>
-                          博客 · Hexo
+                          技术 · 博客
                         </a>
                       </li>
                     
@@ -428,7 +428,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Hexo 博客搭建教程 Ⅱ</h1>
+      Hexo 博客搭建教程 Ⅲ</h1>
       <p class="entry-census">
         <span>
           <a href="hehuadong.cn">
@@ -440,7 +440,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-2-20<span class="bull">
+        2020-2-22<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -454,142 +454,98 @@
         <!--<div class="toc-"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>首先在<font color="#2add9c"><a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a></font>选择一个主题<br>以<a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>主题为参考</p>
-<p> · 进入<code>themes</code>文件夹: <code>cd theme</code><br> · 克隆主题到<code>themes</code>文件夹: <code>git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex</code><br> · 修改根目录下的_config.yml配置主题: <code>theme: landscape</code>  ➜  <code>theme: particlex</code><br> · 生成静态资源，启动服务: <code>hexo g</code> <code>hexo s</code><br> · 访问页面<code>localhost:4000</code> 默认端口号: 4000；s 当端口号被占用，可使用命令: <code>hexo s -p 3000</code><br> · 切换主题：<code>themes</code>文件夹下安装多个主题，只需修改根目录下<code>_config.yml</code> <font color="#2add9c">theme</font> 参数即可切换主题</p>
-<h3 id="主题目录介绍"><a href="#主题目录介绍" class="headerlink" title="主题目录介绍"></a>主题目录介绍</h3><pre><code class="bash">&lt;root&gt;
-|---public # 静态网页文件
-|---source # 资源文件夹,md文章存放处（不要和主题文件夹下的source弄混）
-|---themes # 主题
-    |---&lt;theme-name&gt;
-        |---layout # 布局文件
-        |   |---layout.ejs # 网页的基本布局
-        |---source # 主题资源文件，里面的内容会生成到静态文件下
+          <h3 id="添加Js-x2F-Css-x2F-Fonts"><a href="#添加Js-x2F-Css-x2F-Fonts" class="headerlink" title="添加Js&#x2F;Css&#x2F;Fonts"></a>添加Js&#x2F;Css&#x2F;Fonts</h3><p>在 <code>&lt;root&gt;\themes\&lt;theme-name&gt;\source</code> 下添加自定义文件(根据个人习惯资源归类，方便查找)，然后在使用的地方添加如下内容：</p>
+<pre><code class="html">&lt;!--CSS--&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;file-name&gt;&quot; /&gt;
+
+&lt;!--JS--&gt;
+&lt;script src=&quot;/&lt;file-name&gt;&quot;&gt;&lt;/script&gt;
 </code></pre>
-<h3 id="EJS模板语言"><a href="#EJS模板语言" class="headerlink" title="EJS模板语言"></a><a target="_blank" rel="noopener" href="https://ejs.bootcss.com/#promo">EJS</a>模板语言</h3><p>EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。<br>hexo初始化建站，默认安装依赖<code>hexo-renderer-ejs</code> ,<code>hexo-renderer-stylus</code><br>一般主题使用什么模板语言开发，博主使用对应的模板语言，减少不必要的代码重构</p>
-<pre><code class="ejs">// 基础使用
-&lt;% if (user) &#123; %&gt;
-  &lt;h2&gt;&lt;%= user.name %&gt;&lt;/h2&gt;
+<h3 id="我使用的自定义文件"><a href="#我使用的自定义文件" class="headerlink" title="我使用的自定义文件"></a>我使用的自定义文件</h3><h4 id="Aplayer"><a href="#Aplayer" class="headerlink" title="Aplayer"></a>Aplayer</h4><p>· 概述：APlayer 是一个可爱的 HTML5 音乐播放器<br>· 依赖：需要 <a target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS">Meting.js</a> 支持<br>· 下载：<a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer#readme">GitHub 传送门</a><br>· 文档：<a target="_blank" rel="noopener" href="https://aplayer.js.org/#/home">传送门</a></p>
+<h4 id="Dplayer"><a href="#Dplayer" class="headerlink" title="Dplayer"></a>Dplayer</h4><p>· 概述：DPlayer是一个可爱的HTML5弹幕视频播放器，帮助人们轻松构建视频和弹幕。<br>· 依赖：需要 <a target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS">Meting.js</a> 支持<br>· 下载：<a target="_blank" rel="noopener" href="https://github.com/DIYgod/DPlayer">GitHub 传送门</a><br>· 文档：<a target="_blank" rel="noopener" href="https://dplayer.diygod.dev/zh/">传送门</a><br>· 工具：<a target="_blank" rel="noopener" href="https://ffmpeg.org/">FFmpeg</a>切片工具<br>· 文章：<a href="/tec/code/ffmpeg视频切片">Dplayer + ffmpeg视频切片</a></p>
+<h4 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h4><p>· 概述：一款快速、简洁且高效的无后端评论系统。<br>· 特点：快速、安全、Emoji😄、无后端实现、<code>Markdown</code> 支持、文章阅读量统计<br>· 依赖：依赖于<code>LeanClound</code>应用，需要登陆&#x2F;注册来获取 App ID 和 App Key<br>· 应用：<a target="_blank" rel="noopener" href="https://console.leancloud.cn/login?from=/apps">LeanClound 传送门</a><br>· 文档：<a target="_blank" rel="noopener" href="https://valine.js.org/quickstart.html">传送门</a><br>· 使用：</p>
+<pre><code class="html">&lt;head&gt;
+    ..
+    &lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&gt;&lt;/script&gt;
+    ...
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;div id=&quot;vcomments&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+        new Valine(&#123;
+            el: &#39;#vcomments&#39;,
+            appId: &#39;Your appId&#39;,
+            appKey: &#39;Your appKey&#39;
+        &#125;)
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h4 id="Live2D看板酱"><a href="#Live2D看板酱" class="headerlink" title="Live2D看板酱"></a>Live2D看板酱</h4><p>使用live2d看板酱，建议live2d模型资源文件放置Github资源仓库中，通过CDN的方式引入使用</p>
+<h5 id="live2d模型站（可以选择你喜欢的模型）：https-mx-paul-ren"><a href="#live2d模型站（可以选择你喜欢的模型）：https-mx-paul-ren" class="headerlink" title="live2d模型站（可以选择你喜欢的模型）：https://mx.paul.ren/"></a>live2d模型站（可以选择你喜欢的模型）：<a target="_blank" rel="noopener" href="https://mx.paul.ren/">https://mx.paul.ren/</a></h5><h5 id="项目地址："><a href="#项目地址：" class="headerlink" title="项目地址："></a>项目地址：</h5><p>Typecho 版（保罗的小宇宙做的）<br>· 特点：自带 Pio 模型，支持后台更换其他模型，还可自定义换肤，可放在插件目录下或外部引用<br>· 依赖：无<br>· 下载：<a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Pio">GitHub 传送门</a><br>· 文档：<a target="_blank" rel="noopener" href="https://docs.paul.ren/pio/#/">传送门</a></p>
+<p>WordPress 版（喵喵做的）<br>· 特点：自带 2233 模型，不支持后台更换，但包含一言、文字交互等功能<br>· 依赖：需要 JQuery 支持<br>· 下载：<a target="_blank" rel="noopener" href="https://github.com/xb2016/33-live2d-wp">GitHub 传送门</a></p>
+<p>Emlog 版（广树做的）<br>· 特点：自带 Histoire 模型，不支持后台更换，但可以接入图灵机器人实现互动<br>· 依赖：需要 JQuery 支持<br>· 下载：<a target="_blank" rel="noopener" href="https://www.wikimoe.com/?post=75">传送门</a></p>
+<p>Z-Blog 版（FGHRSH 做的）<br>· 特点：自带 Pio、Tia 模型，支持换肤。不支持后台更换，但包含一言、文字交互等功能<br>· 依赖：需要 JQuery 支持<br>· 下载：<a target="_blank" rel="noopener" href="https://www.fghrsh.net/post/123.html">传送门</a></p>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><pre><code class="yaml">#live2d 看板娘
+live2d:
+  enable: true  # 是否开启
+  model: umaru  # 看板娘模型 nero&lt;尼洛&gt; || umaru&lt;干物妹小埋&gt; || Violet&lt;薇尔莉特&gt; || platelet&lt;血小板&gt;
+  mode: fixed  # 模式  static || fixed || draggable
+  position: left # 位置
+  hidden: true, # 隐藏
+  width: 200
+  height: 300
+  dialog: &#39;3em&#39;
+
+#CDN
+CDN:  
+  #live2d
+  live2d: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@master/live2d.js
+  live2d_piocss: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@1.01/pio.css
+  live2d_piojs: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@1.01/pio.js
+  live2d_model: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@latest/models
+</code></pre>
+<p>ejs模板语言可以使用主题目录下<code>_config.yml</code>下的配置</p>
+<pre><code class="ejs">&lt;% if (theme.live2d &amp;&amp; theme.live2d.enable)&#123; %&gt;
+  &lt;!-- 引用看板娘交互所需的样式表 --&gt;
+  &lt;link href=&quot;&lt;%- theme.CDN.live2d_piocss %&gt;&quot; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;/&gt;
+   &lt;div class=&quot;pio-container &lt;%- theme.live2d.position %&gt;&quot;&gt;
+    &lt;div class=&quot;pio-action&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;pio-btn&quot;&gt;&lt;/div&gt;
+    &lt;canvas id=&quot;pio&quot; width=&quot;&lt;%- theme.live2d.width %&gt;&quot; height=&quot;&lt;%- theme.live2d.height %&gt;&quot;&gt;&lt;/canvas&gt;
+  &lt;/div&gt;
+  &lt;!-- 引用 Live2D 核心组件 --&gt;
+  &lt;script src=&quot;&lt;%- theme.CDN.live2d %&gt;&quot;&gt;&lt;/script&gt;
+  &lt;!-- 引用看板娘交互组件 --&gt;
+  &lt;script src=&quot;&lt;%- theme.CDN.live2d_piojs %&gt;&quot;&gt;&lt;/script&gt;
+  &lt;!-- Live2D看板娘设置 --&gt;
+  &lt;script&gt;
+    const live2d_model = &quot;&lt;%- theme.CDN.live2d_model %&gt;/&lt;%- theme.live2d.model %&gt;/live2d_model.json&quot;
+    var pio = new Paul_Pio(&#123;
+      &quot;mode&quot;: &quot;&lt;%- theme.live2d.mode %&gt;&quot;,
+      &quot;hidden&quot;: &quot;&lt;%- theme.live2d.hidden %&gt;&quot;,
+      &quot;content&quot;: &#123;
+          &quot;welcome&quot;: [&quot;欢迎来到Hesperus的小宇宙！&quot;, &quot;今天天气不错，一起来玩吧！&quot;, &quot;博主每天都有些折腾记录，欢迎前往他的小窝阅读~&quot;],
+          &quot;touch&quot;: [&quot;你这个绅士！&quot;, &quot;别碰我！&quot;],
+          &quot;home&quot;: &quot;点击这里回到首页！&quot;,
+          &quot;link&quot;: `$&#123;location.href&#125;`,
+          &quot;close&quot;: &quot;QWQ 有缘再会吧~&quot;,
+          &quot;referer&quot;: &quot;你通过 %t 来到了这里&quot;,
+          &quot;custom&quot;: [
+              &#123;&quot;selector&quot;: &quot;.comment-form&quot;, &quot;text&quot;: &quot;欢迎参与本文评论，别发小广告噢~&quot;&#125;,
+              &#123;&quot;selector&quot;: &quot;.home-social a:last-child&quot;, &quot;text&quot;: &quot;在这里可以了解博主的日常噢~&quot;&#125;,
+              &#123;&quot;selector&quot;: &quot;.post-item a&quot;, &quot;type&quot;: &quot;read&quot;&#125;,
+              &#123;&quot;selector&quot;: &quot;.post-content a, .page-content a&quot;, &quot;type&quot;: &quot;link&quot;&#125;,
+              &#123;&quot;selector&quot;: &quot;#pio&quot;, &quot;type&quot;: &quot;&quot;, &quot;text&quot;: [&quot;你在干什么？&quot;, &quot;再摸我就报警了！&quot;, &quot;HENTAI!&quot;, &quot;不可以这样欺负我啦！&quot;,&quot;干嘛动我呀！小心我咬你！&quot;,&quot;110吗！这里有个怪蜀黍一直在戳我 (｡ ́︿ ̀｡)&quot;,&quot;再碰我就告诉Hesperus!!!&quot;]&#125;,
+          ]
+      &#125;,
+      &quot;night&quot;: &quot;this.night()&quot;,
+      &quot;model&quot;: [ live2d_model ]
+  &#125;);
+  // DIY设置模态框位置
+  document.querySelector(&#39;.pio-container .pio-dialog&#39;).style.top = &quot;&lt;%- theme.live2d.dialog %&gt;&quot;
+  &lt;/script&gt; 
 &lt;% &#125; %&gt;
-
-/*--  导入文件  --*/
-&lt;%- partial(&#39;partial/header&#39;) %&gt;
-&lt;div id=&quot;content&quot;&gt;Home page&lt;/div&gt;
-</code></pre>
-<p><b>常用标签含义</b></p>
-<div class="table-wrapper">
-
-<table>
-<thead>
-<tr>
-<th>标签</th>
-<th>含义、作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&lt;%</td>
-<td>‘脚本’ 标签，用于流程控制，无输出。</td>
-</tr>
-<tr>
-<td>&lt;%_</td>
-<td>删除其前面的空格符</td>
-</tr>
-<tr>
-<td>&lt;%&#x3D;</td>
-<td>输出数据到模板（输出是转义 HTML 标签）</td>
-</tr>
-<tr>
-<td>&lt;%-</td>
-<td>输出非转义的数据到模板</td>
-</tr>
-<tr>
-<td>&lt;%#</td>
-<td>注释标签，不执行、不输出内容</td>
-</tr>
-<tr>
-<td>&lt;%%</td>
-<td>输出字符串 ‘&lt;%’</td>
-</tr>
-<tr>
-<td>%&gt;</td>
-<td>一般结束标签</td>
-</tr>
-<tr>
-<td>-%&gt;</td>
-<td>删除紧随其后的换行符</td>
-</tr>
-<tr>
-<td>_%&gt;</td>
-<td>将结束标签后面的空格符删除</td>
-</tr>
-</tbody></table>
-</div>
-
-<h3 id="自定义网站配置"><a href="#自定义网站配置" class="headerlink" title="自定义网站配置"></a>自定义网站配置</h3><p>打开博客根目录下的 <code>_config.yml</code>，下面是主要参数的介绍</p>
-<pre><code class="yaml">#----  站点  ----#
-title: # 标题
-subtitle: # 副标题
-description: # 描述
-keywords: # 关键字
-author: # 作者
-language: # 语言
-timezone: # 时区
-
-#----- 路由路径 -----#
-url: # 网址
-root: # 根目录
-permalink: # 文章链接格式
-permalink_defaults: # 链接默认值
-pretty_urls:
-  trailing_index: # 是否在永久链接中保留尾部的 index.html，设置为 false 时去除
-  trailing_html: # 是否在永久链接中保留尾部的 .html, 设置为 false 时去除 (对尾部的 index.html无效)
-
-#----- 文件目录  -----#
-source_dir: # 资源文件夹，这个文件夹用来存放内容
-public_dir: # 公共文件夹，这个文件夹用于存放生成的站点文件
-tag_dir: # 标签文件夹
-archive_dir:  # 归档文件夹
-category_dir: # 分类文件夹
-code_dir: # Include code 文件夹，source_dir 下的子目录
-i18n_dir: # 国际化（i18n）文件夹
-skip_render: # 跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 public 目录中 
-
-#------  文章  -------#
-new_post_name:  # 新文章的文件名
-default_layout:  # 预设布局
-titlecase: false # 标题转化为首字母大写
-external_link:
-  enable:  # 开启，新的标签页打开外部链接
-  field:  # 适用于整个站点, 设置 post, 仅对文章（post）生效
-  exclude:  # 需要排除的域名。主域名和子域名如 www 需分别配置
-filename_case: 0 # 把文件名称转换为 (1) 小写或 (2) 大写
-
-#-------  首页文章配置  -------#
-index_generator:
-  per_page:  # 每页显示的帖子。(0 =禁用分页)
-  order_by:  # 文章的顺序。(默认按日期递减排序)
-
-#------  日期 / 时间格式  ------#
-date_format: YYYY-MM-DDs
-time_format: HH:mm:ss
-
-#------  分页  ------#
-per_page: # 每页显示的文章量 (0 = 关闭分页功能)
-pagination_dir: # 分页目录
-
-#----  包括 / 不包括目录或文件  ----#
-include: # 包括隐藏文件
-exclude: # 排除文件/文件夹
-ignore: # 忽略文件/文件夹
-
-#------  主题  -----#
-theme: #主题
-
-#------  部署  -----#
-deploy:
-  type: # 部署方式
-  repo: # 部署仓库
-    coding: # 部署的仓库地址
-  branch: # 部署分支
 </code></pre>
 
         </div>
@@ -622,7 +578,7 @@ deploy:
           
             <div class="post-nepre half previous">
           
-            <a href="/tec/hexo/hexo-blog-3/" rel="prev">
+            <a href="/post/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
               </div>
@@ -630,7 +586,7 @@ deploy:
               Previous Post</span>
               <div class="info">
                 <h3>
-                Hexo 博客搭建教程 Ⅲ</h3>
+                安装Vue教程</h3>
                 <hr>
               </div>
             </a>
@@ -640,7 +596,7 @@ deploy:
           
             <div class="post-nepre half next">
           
-            <a href="/tec/hexo/hexo-blog-1/" rel="next">
+            <a href="/tec/blog/hexo-blog-2/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
               </div>
@@ -648,7 +604,7 @@ deploy:
               Next Post</span>
               <div class="info">
                 <h3>
-                Hexo 博客搭建教程 Ⅰ</h3>
+                Hexo 博客搭建教程 Ⅱ</h3>
                 <hr>
               </div>
             </a>
@@ -1046,9 +1002,9 @@ $(document).ready(function() {
               </li>
             
               <li>
-                <a href="/tec/hexo">
+                <a href="/tec/blog">
                   <i class="fa fa-book" aria-hidden="true"></i>
-                  博客 · Hexo
+                  技术 · 博客
                 </a>
               </li>
             
