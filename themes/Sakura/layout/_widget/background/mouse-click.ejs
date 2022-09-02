@@ -1,4 +1,4 @@
-<% if (theme.afireworks && theme.fireworks.enable){ %>
+<% if (theme.fireworks && theme.fireworks.enable){ %>
   <script src="<%- theme.CDN.fireworks %>"></script>
 <% } %>
 
@@ -6,12 +6,12 @@
   <script src="<%- theme.CDN.click_heart %>"></script>
 <% } %>
 
-<% if (theme.ClickShowText && theme.ClickShowText.enable){ %>
+<% if (theme.click_show_text && theme.click_show_text.enable){ %>
   <script>
     var clickShowText_config = {
-      _text: "<%- theme.ClickShowText.text %>",
-      _fontSize: "<%- theme.ClickShowText.fontSize %>"
+      _text: "<%- theme.click_show_text.text %>",
+      _fontSize: "<%- theme.click_show_text.fontSize %>"
     }
   </script>
-  <script src="<%- theme.CDN.ClickShowText%>"></script>
+  <script src="<%- theme.CDN.click_show_text%>"></script>
 <% } %>

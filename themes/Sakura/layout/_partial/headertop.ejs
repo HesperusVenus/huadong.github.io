@@ -25,16 +25,16 @@
               <% if (theme.social[i].qrcode) {%>
                 <li class="wechat">
                   <a href="<%= theme.social[i].url%>">
-                    <img src="<%- (theme.CDN.default || '') + theme.social[i].img%>">
+                    <img src="<%- (theme.CDN.main || '') + theme.social[i].img%>">
                   </a>
                   <div class="wechatInner">
-                    <img src="<%- (theme.CDN.default || '') + theme.social[i].qrcode%>">
+                    <img src="<%- (theme.CDN.main || '') + theme.social[i].qrcode%>">
                   </div>
                 </li>
               <% } else { %>
                 <li>
                   <a href="<%= theme.social[i].url%>" target="_blank" class="social-github" title="<%- i %>">
-                    <img src="<%- (theme.CDN.default || '') + theme.social[i].img%>">
+                    <img src="<%- (theme.CDN.main || '') + theme.social[i].img%>">
                   </a>
                 </li>
               <% } %>

@@ -61,8 +61,8 @@
     var QRBox = $('#QRBox');
     var MainBox = $('#MainBox');
     var BTCQR = '/images/donate/BTCQR.png'; // 二维码路径
-    var AliPayQR  = '<%- (theme.CDN.default || '') + theme.donate.alipay %>';
-    var WeChanQR  = '<%- (theme.CDN.default || '') + theme.donate.wechatSQ %>';
+    var AliPayQR  = '<%- (theme.CDN.main || '') + theme.donate.alipay %>';
+    var WeChanQR  = '<%- (theme.CDN.main || '') + theme.donate.wechatSQ %>';
 
     function showQR(QR) {
       if (QR) {

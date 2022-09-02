@@ -28,11 +28,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
-  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
-  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/fonts/miao/miao.css">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
   <!-- <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
@@ -71,7 +71,7 @@
   * bg_num   壁纸cover数量
   * bgindex  壁纸的索引对应壁纸的名称
   */
-  var bg = '<%- theme.CDN.default + theme.bg_cover.url %>';
+  var bg = '<%- theme.CDN.main + theme.bg_cover.url %>';
   var bg_num = "<%= theme.bg_cover.img_num %>"
   var bgindex = Math.floor((Math.random()* bg_num)+1);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
