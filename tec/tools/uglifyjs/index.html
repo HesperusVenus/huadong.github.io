@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">技术 · 工具 ～ 测试版_01 | Hua Dong&#39;s blog</title>
+  <title itemprop="name">UglifyJS | Hua Dong&#39;s blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico?">
   
@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
-  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
-  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/fonts/miao/miao.css">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
   <!-- <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
@@ -428,7 +428,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      技术 · 工具 ～ 测试版_01</h1>
+      UglifyJS</h1>
       <p class="entry-census">
         <span>
           <a href="hehuadong.cn">
@@ -440,7 +440,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-7-20<span class="bull">
+        2022-9-2<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -454,16 +454,41 @@
         <!--<div class="toc-"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <hr>
-<h2 id="tec-技术-工具"><a href="#tec-技术-工具" class="headerlink" title="  tec-技术 @ 工具"></a>  tec-技术 @ 工具</h2>
+          <h3 id="UglifyJS"><a href="#UglifyJS" class="headerlink" title="UglifyJS"></a>UglifyJS</h3><p>UglifyJS 是一个 JavaScript 解析器、压缩器、压缩器和美化工具包。</p>
+<p>Github: <a target="_blank" rel="noopener" href="https://github.com/mishoo/UglifyJS">传送门</a><br>Ps: 需要<code>node</code>环境</p>
+<p>安装：</p>
+<pre><code class="bash"> npm install uglifyjs -g 
+ # 或
+ npm install uglify-js
+</code></pre>
+<p>使用：</p>
+<pre><code class="bash"># -c  --compress  开启压缩
+# -m  --mangle  混淆的名称或混淆的选项
+# -o  -output &lt;file&gt;  输出路径、文件名称
+uglifyjs &lt;file-name&gt;.js -c -m -o &lt;file-name&gt;.min.js
+</code></pre>
+<p>批量压缩本地js文件，保存bat文件. 适用于window</p>
+<pre><code class="bat">@echo off
+:: 设置压缩JS文件的根目录，脚本会自动按树层次查找和压缩所有的JS
+SET JSFOLDER=C:\work\test\
+echo 正在查找JS文件
+chdir /d %JSFOLDER%
+for /r . %%a in (*.js) do (
+    @echo 正在压缩 %%~a ...
+    uglifyjs %%~fa  -m -o %%~fa
+)
+echo 完成!
+pause &amp; exit
+</code></pre>
+
         </div>
         <!-- .entry-content -->
         <!-- <div class="single-reward">
           <div class="reward-open">赏
             <div class="reward-main">
               <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/custom/donate/AliPayQR.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/custom/donate/WeChanQR.jpg"></li>
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assetsnull"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assetsnull"></li>
               </ul>
             </div>
           </div>
@@ -483,36 +508,19 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/post/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                安装Vue教程</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/tec/hexo/hexo-blog-3/" rel="next">
+            <a href="/tec/code/JavaScript%20%E4%B8%AD%E7%9A%84%E8%B4%A7%E5%B8%81%E8%AE%A1%E7%AE%97/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/banner/coding.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/banner/coding.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Hexo 博客搭建教程 Ⅲ</h3>
+                JavaScript 中的货币计算</h3>
                 <hr>
               </div>
             </a>
@@ -573,7 +581,7 @@
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>钻研vue的人</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
@@ -682,18 +690,18 @@
 
   <link href="https://cdn.jsdelivr.net/npm/video.js@7.10.1/dist/video-js.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/video.js@7.10.1/dist/video.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@latest/dist/videojs-contrib-hls.min.js"></script>
 
 
-<script type="text/javascript" src="/js/lib.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
-<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/zoom.min.js"></script>
 <script type="text/javascript" src="/js/sakura-app.js"></script>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/av-min.js"></script>
 <script src='https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js'></script>
-<script src="/js/botui.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/botui.js"></script>
 <!-- 不蒜子 网页计数器 -->
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
@@ -767,7 +775,7 @@ $(document).ready(function() {
   </section>
   
   <!-- <div id="dplayer"></div> -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/DIYgod/DPlayer@latest/dist/DPlayer.min.js"></script> 
   <!-- <script>
     const _list = JSON.parse('{"Movie":[{"video":{"title":"杀戮都市O","pic":"pic.jpg","type":"customHls","species":"电影🎬","class":"movie"},"subtitle_url":"xxx"}],"番剧🐱":[null]}');
@@ -1064,8 +1072,8 @@ $(document).ready(function() {
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
@@ -1139,18 +1147,18 @@ $(document).ready(function() {
     id="meteor"
     style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
 ></canvas>
-<script src="/js/third-party/bg_meteor.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/bg_meteor.min.js"></script>
 
 
 
-  <script defer="" id="ribbon" src="/js/third-party/canvas_ribbon.js" size="150" alpha="0.6" zindex="0.6" mobile="false" data-click="true"></script>
+  <script defer="" id="ribbon" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/canvas_ribbon.min.js" size="150" alpha="0.6" zindex="0.6" mobile="false" data-click="true"></script>
 
 
-  <script id="ribbon_piao" src="/js/third-party/canvas_ribbon_piao.js" mobile="false"></script>
+  <script id="ribbon_piao" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/canvas_ribbon_piao.min.js" mobile="false"></script>
 
 
 
-  <script src="/js/third-party/activate_power_mode.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/activate_power_mode.min.js"></script>
   <script>
     POWERMODE.colorful = "true";
     POWERMODE.shake = "true";
@@ -1162,7 +1170,7 @@ $(document).ready(function() {
 
 
   
-    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
   
 
   
@@ -1202,9 +1210,9 @@ $(document).ready(function() {
 
 
 
+  <script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/fireworks.min.js"></script>
 
 
-  <script src="/js/third-party/click_heart.js"></script>
 
 
 
@@ -1214,7 +1222,7 @@ $(document).ready(function() {
       _fontSize: "15px"
     }
   </script>
-  <script src="/js/third-party/ClickShowText.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/click_show_text.min.js"></script>
 
   
 

@@ -544,15 +544,15 @@ function checkBgImgCookie() {
   if (bgurl != "") {
     if (
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/themebg/sakura.png" ||
+        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/themebg/sakura.png" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/themebg/plaid.jpg" ||
+        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/themebg/plaid.jpg" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/themebg/star.png" ||
+        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/themebg/star.png" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/themebg/point.png" ||
+        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/themebg/point.png" ||
       bgurl ==
-        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/themebg/little-monster.png"
+        "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/themebg/little-monster.png"
     ) {
       mashiro_global.variables.skinSecter = true;
       mashiro_global.variables.isNight = false;
@@ -1359,11 +1359,14 @@ var home = location.href,
     },
     AB: function () {
       if (window.location.pathname.indexOf("about") > -1) {
-        $.getScript("/js/botui.js", function () {
-          if (typeof botui == undefined && !botui.message) {
-            bot_ui_ini();
+        $.getScript(
+          "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/botui.js",
+          function () {
+            if (typeof botui == undefined && !botui.message) {
+              bot_ui_ini();
+            }
           }
-        });
+        );
       }
     },
     VA: function () {
@@ -1969,7 +1972,6 @@ $(function () {
   Siren.LV();
   if (window.is_app) injectStyles("#nprogress .bar { display: none; }");
   if (Poi.pjax) {
-    console.log("--------------------------", Poi.pjax);
     $(document)
       .pjax("a[target!=_top]", "#page", {
         fragment: "#page",
@@ -2062,16 +2064,16 @@ $(function () {
     "https://2heng.xin/"
   );
   console.log(
+    "%c Github %c",
+    "background:#24272A; color:#ffffff",
+    "",
+    "https://github.com/mashirozx/Sakura/"
+  );
+  console.log(
     "%c hojun %c",
     "background:#24272A; color:#ffffff",
     "",
     "https://www.hojun.cn/"
-  );
-  console.log(
-    "%c huadong %c",
-    "background:#24272A; color:#ffffff",
-    "",
-    "https://www.hehuadong.cn/"
   );
   console.log(
     "%c Github %c",

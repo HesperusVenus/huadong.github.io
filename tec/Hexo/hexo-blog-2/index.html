@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/lib.min.css" media="all">
   <link rel="stylesheet" href="/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
-  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
-  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/fonts/miao/miao.css">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
   <!-- <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
@@ -454,9 +454,9 @@
         <!--<div class="toc-"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="安装主题"><a href="#安装主题" class="headerlink" title="# 安装主题"></a># 安装主题</h2><p>首先在<font color="#2add9c"><a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a></font>选择一个主题<br>以<a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>主题为参考</p>
+          <h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>首先在<font color="#2add9c"><a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a></font>选择一个主题<br>以<a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>主题为参考</p>
 <p> · 进入<code>themes</code>文件夹: <code>cd theme</code><br> · 克隆主题到<code>themes</code>文件夹: <code>git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex</code><br> · 修改根目录下的_config.yml配置主题: <code>theme: landscape</code>  ➜  <code>theme: particlex</code><br> · 生成静态资源，启动服务: <code>hexo g</code> <code>hexo s</code><br> · 访问页面<code>localhost:4000</code> 默认端口号: 4000；s 当端口号被占用，可使用命令: <code>hexo s -p 3000</code><br> · 切换主题：<code>themes</code>文件夹下安装多个主题，只需修改根目录下<code>_config.yml</code> <font color="#2add9c">theme</font> 参数即可切换主题</p>
-<h2 id="主题目录介绍"><a href="#主题目录介绍" class="headerlink" title="# 主题目录介绍"></a># 主题目录介绍</h2><pre><code class="bash">&lt;root&gt;
+<h3 id="主题目录介绍"><a href="#主题目录介绍" class="headerlink" title="主题目录介绍"></a>主题目录介绍</h3><pre><code class="bash">&lt;root&gt;
 |---public # 静态网页文件
 |---source # 资源文件夹,md文章存放处（不要和主题文件夹下的source弄混）
 |---themes # 主题
@@ -465,7 +465,7 @@
         |   |---layout.ejs # 网页的基本布局
         |---source # 主题资源文件，里面的内容会生成到静态文件下
 </code></pre>
-<h2 id="EJS模板语言"><a href="#EJS模板语言" class="headerlink" title="# EJS模板语言"></a># <a target="_blank" rel="noopener" href="https://ejs.bootcss.com/#promo">EJS</a>模板语言</h2><p>EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。<br>hexo初始化建站，默认安装依赖<code>hexo-renderer-ejs</code> ,<code>hexo-renderer-stylus</code><br>一般主题使用什么模板语言开发，博主使用对应的模板语言，减少不必要的代码重构</p>
+<h3 id="EJS模板语言"><a href="#EJS模板语言" class="headerlink" title="EJS模板语言"></a><a target="_blank" rel="noopener" href="https://ejs.bootcss.com/#promo">EJS</a>模板语言</h3><p>EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。<br>hexo初始化建站，默认安装依赖<code>hexo-renderer-ejs</code> ,<code>hexo-renderer-stylus</code><br>一般主题使用什么模板语言开发，博主使用对应的模板语言，减少不必要的代码重构</p>
 <pre><code class="ejs">// 基础使用
 &lt;% if (user) &#123; %&gt;
   &lt;h2&gt;&lt;%= user.name %&gt;&lt;/h2&gt;
@@ -524,7 +524,7 @@
 </tbody></table>
 </div>
 
-<h2 id="自定义网站配置"><a href="#自定义网站配置" class="headerlink" title="# 自定义网站配置"></a># 自定义网站配置</h2><p>打开博客根目录下的 <code>_config.yml</code>，下面是主要参数的介绍</p>
+<h3 id="自定义网站配置"><a href="#自定义网站配置" class="headerlink" title="自定义网站配置"></a>自定义网站配置</h3><p>打开博客根目录下的 <code>_config.yml</code>，下面是主要参数的介绍</p>
 <pre><code class="yaml">#----  站点  ----#
 title: # 标题
 subtitle: # 副标题
@@ -598,8 +598,8 @@ deploy:
           <div class="reward-open">赏
             <div class="reward-main">
               <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/custom/donate/AliPayQR.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/custom/donate/WeChanQR.jpg"></li>
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assetsnull"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assetsnull"></li>
               </ul>
             </div>
           </div>
@@ -818,18 +818,18 @@ deploy:
 
   <link href="https://cdn.jsdelivr.net/npm/video.js@7.10.1/dist/video-js.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/video.js@7.10.1/dist/video.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@latest/dist/videojs-contrib-hls.min.js"></script>
 
 
-<script type="text/javascript" src="/js/lib.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
-<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/zoom.min.js"></script>
 <script type="text/javascript" src="/js/sakura-app.js"></script>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/av-min.js"></script>
 <script src='https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js'></script>
-<script src="/js/botui.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/botui.js"></script>
 <!-- 不蒜子 网页计数器 -->
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
@@ -903,7 +903,7 @@ $(document).ready(function() {
   </section>
   
   <!-- <div id="dplayer"></div> -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/DIYgod/DPlayer@latest/dist/DPlayer.min.js"></script> 
   <!-- <script>
     const _list = JSON.parse('{"Movie":[{"video":{"title":"杀戮都市O","pic":"pic.jpg","type":"customHls","species":"电影🎬","class":"movie"},"subtitle_url":"xxx"}],"番剧🐱":[null]}');
@@ -1200,8 +1200,8 @@ $(document).ready(function() {
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <style>
@@ -1275,18 +1275,18 @@ $(document).ready(function() {
     id="meteor"
     style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
 ></canvas>
-<script src="/js/third-party/bg_meteor.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/bg_meteor.min.js"></script>
 
 
 
-  <script defer="" id="ribbon" src="/js/third-party/canvas_ribbon.js" size="150" alpha="0.6" zindex="0.6" mobile="false" data-click="true"></script>
+  <script defer="" id="ribbon" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/canvas_ribbon.min.js" size="150" alpha="0.6" zindex="0.6" mobile="false" data-click="true"></script>
 
 
-  <script id="ribbon_piao" src="/js/third-party/canvas_ribbon_piao.js" mobile="false"></script>
+  <script id="ribbon_piao" src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/canvas_ribbon_piao.min.js" mobile="false"></script>
 
 
 
-  <script src="/js/third-party/activate_power_mode.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/activate_power_mode.min.js"></script>
   <script>
     POWERMODE.colorful = "true";
     POWERMODE.shake = "true";
@@ -1298,7 +1298,7 @@ $(document).ready(function() {
 
 
   
-    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
   
 
   
@@ -1338,9 +1338,9 @@ $(document).ready(function() {
 
 
 
+  <script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/fireworks.min.js"></script>
 
 
-  <script src="/js/third-party/click_heart.js"></script>
 
 
 
@@ -1350,7 +1350,7 @@ $(document).ready(function() {
       _fontSize: "15px"
     }
   </script>
-  <script src="/js/third-party/ClickShowText.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/click_show_text.min.js"></script>
 
   
 
