@@ -16,7 +16,7 @@ keywords: Hexo
 description: 炫酷的样式，多样化的功能！买定离手，CV拿走|●´∀`|σ
 ---
 
-## # 添加Js/Css/Fonts
+### 添加Js/Css/Fonts
 
 在 `<root>\themes\<theme-name>\source` 下添加自定义文件(根据个人习惯资源归类，方便查找)，然后在使用的地方添加如下内容：
 
@@ -29,7 +29,7 @@ description: 炫酷的样式，多样化的功能！买定离手，CV拿走|●�
 
 ```
 
-## # 我使用的自定义文件
+### 我使用的自定义文件
 #### Aplayer
 · 概述：APlayer 是一个可爱的 HTML5 音乐播放器
 · 依赖：需要 [Meting.js](https://github.com/metowolf/MetingJS) 支持

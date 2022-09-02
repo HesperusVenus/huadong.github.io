@@ -3,7 +3,7 @@ title: GitHub + FFmpeg视频切片
 avatar: /images/avatar.jpeg
 comments: true
 author: Hesperus｜Venus
-cover: "https://m1314.cn/wp-content/themes/Sakura/images/random/d-1.jpg"
+cover: ""
 date: 2020-07-21 13:29:01
 authorLink: hehuadong.cn
 tags:
@@ -11,7 +11,7 @@ tags:
   - code
 keywords: 切片FFmpeg
 description: GitHub + jsDelivr视频切片测试
-photos: "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/cover/06.jpg"
+photos: "https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/cover/06.jpg"
 ---
 
 ### 前言
@@ -126,7 +126,7 @@ ffmpeg -i output.mp4 -c copy -map 0 -f segment -segment_list playlist.m3u8 -segm
 ```
 
 4. 这样就算切片成功了，视频被切割成你想要长度的 ts 文件，只要低于 20M 就可以放入 GitHub 了
-   ![ffmpeg切片](/images/ffmpeg切片.png)
+   ![ffmpeg切片](https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/_posts/tec/ffmpeg切片.png)
 
 ### [Github](https://github.com/)建库
 

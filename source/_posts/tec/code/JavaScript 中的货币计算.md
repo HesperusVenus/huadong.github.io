@@ -3,8 +3,8 @@ title: JavaScript 中的货币计算
 avatar: /images/avatar.jpeg
 comments: true
 author: Hesperus｜Venus
-cover: 'https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/cover/post/currency.jpg'
-photos: 'https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/banner/coding.jpg'
+cover: 'https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/cover/post/currency.jpg'
+photos: 'https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/banner/coding.jpg'
 date: 2021-09-17 19:24:01
 authorLink: hehuadong.cn
 authorAbout: javascript

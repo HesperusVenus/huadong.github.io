@@ -16,7 +16,7 @@ keywords: Hexo
 description: Hexo 选择巴适的主题 (￣▽￣)~*
 ---
 
-## # 安装主题
+## 安装主题
 
 首先在<font color="#2add9c">[这里](https://hexo.io/themes/)</font>选择一个主题
 以[ParticleX](https://github.com/argvchs/hexo-theme-particlex)主题为参考
@@ -28,7 +28,7 @@ description: Hexo 选择巴适的主题 (￣▽￣)~*
  · 访问页面`localhost:4000` 默认端口号: 4000；s 当端口号被占用，可使用命令: `hexo s -p 3000`
  · 切换主题：`themes`文件夹下安装多个主题，只需修改根目录下`_config.yml` <font color="#2add9c">theme</font> 参数即可切换主题
 
-## # 主题目录介绍
+### 主题目录介绍
 ```bash
 <root>
 |---public # 静态网页文件
@@ -41,7 +41,7 @@ description: Hexo 选择巴适的主题 (￣▽￣)~*
 
 ```
 
-## # [EJS](https://ejs.bootcss.com/#promo)模板语言
+### [EJS](https://ejs.bootcss.com/#promo)模板语言
 
 EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。
 hexo初始化建站，默认安装依赖`hexo-renderer-ejs` ,`hexo-renderer-stylus`
@@ -75,7 +75,7 @@ hexo初始化建站，默认安装依赖`hexo-renderer-ejs` ,`hexo-renderer-styl
 
 </div>
 
-## # 自定义网站配置
+### 自定义网站配置
 打开博客根目录下的 `_config.yml`，下面是主要参数的介绍
 
 ```yaml

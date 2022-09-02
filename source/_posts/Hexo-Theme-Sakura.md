@@ -1,8 +1,8 @@
 ---
 title: Hexo-Theme-Sakura
-author: hojun
-avatar: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg
-authorLink: hojun.cn
+avatar: /images/avatar.jpeg
+author: Hesperus｜Venus
+authorLink: hehuadong.cn
 authorAbout: 一个好奇的人
 authorDesc: 一个好奇的人
 date: 2018-12-12 22:16:01
@@ -10,27 +10,19 @@ comments: true
 # tec: Sakura-Theme
 tags: 
  - /
- - tools
- - other
+ - hexo
 keywords: Sakura
 description: hexo-sakura主题使用教程
 photos: https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png
 ---
+
 hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-sakura/blob/master/README.md)
 
 基于WordPress主题[Sakura](https://github.com/mashirozx/Sakura/)修改成Hexo的主题。
 
 [demo预览](https://sakura.hojun.cn)
 
-正在开发中......
-
 ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
-
-## 交流群
-若你是使用者，加群QQ: 801511924
-
-若你是创作者，加群QQ: 194472590
-
 
 ## 主题特性
 
@@ -42,16 +34,6 @@ hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-
  - pjax支持，音乐不间断
  - aplayer音乐播放器
  - 多级导航菜单（按现在大部分hexo主题来说，这也算是个特性了）
-
-
-## 赞赏作者
-如果喜欢hexo-theme-sakura主题，可以考虑资助一下哦~非常感激！
-
-[paypal](https://www.paypal.me/hojuncn) | [Alipay 支付宝](https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg) | [WeChat Pay 微信支付](https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg)
-
-## 未完善的使用教程
-
-那啥？老实说我目前也不是很有条理233333333~
 
 ## 1、主题下载安装
 
@@ -372,7 +354,5 @@ hexo-tag-fancybox_img用来在文章或单页面中图片，使用语法如下�
 {% fb_img src [caption] %}
 ```
 详细使用教程详见[hexo-tag-fancybox_img](https://github.com/honjun/hexo-tag-fancybox_img/blob/master/README-zh_cn.md)
-
-## 还有啥，一时想不起来......
 
 To be continued...
