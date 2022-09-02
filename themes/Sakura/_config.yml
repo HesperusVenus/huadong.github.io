@@ -27,8 +27,8 @@ menus:
   技术: { path: /tec, fa: fa-code-fork faa-vertical,
     submenus: { 
       技术 · 编程: { path: /tec/code, fa: fa-code },
-      技术 · 工具: { path: /tec/tools, fa: fa-th-large }, 
-      技术 · 杂谈: { path: /tec/other, fa: fa-book }, 
+      技术 · 工具: { path: /tec/tools, fa: fa-cog }, 
+      技术 · 杂谈: { path: /tec/other, fa: fa-twitch }, 
       博客 · Hexo: { path: /tec/hexo, fa: fa-book }, 
     },
   }
@@ -118,14 +118,14 @@ activate_power_mode:
 # 避免卡頓，建議只開啟一個
 # 點擊煙火特效
 fireworks:
-  enable: false
+  enable: true
 
 # 點擊出現愛心
 click_heart:
-  enable: true
+  enable: false
 
 # 點擊出現文字，文字可自行修改
-ClickShowText:
+click_show_text:
   enable: true
   text:
     - ようこそ!!! (⌒▽⌒) 
@@ -151,7 +151,7 @@ canvas_ribbon_piao:
   mobile: false # false 手機端不顯示 true 手機端顯示
 
  # 流星背景特效
-meteor:
+bg_meteor:
   enable: true
 
 # startdash url, title, desc img
@@ -182,9 +182,12 @@ msocial:
 
 donate:
   # paypal: https://www.paypal.me/hojuncn
-  alipay: /img/custom/donate/AliPayQR.jpg
-  wechat: /img/custom/donate/WeChanQR.jpg
-  wechatSQ: /img/custom/donate/WeChanSQ.jpg
+  # alipay: /img/custom/donate/AliPayQR.jpg
+  # wechat: /img/custom/donate/WeChanQR.jpg
+  # wechatSQ: /img/custom/donate/WeChanSQ.jpg
+  alipay:
+  wechat: 
+  wechatSQ: 
 
 #video
 bg_video:
@@ -262,24 +265,23 @@ v_appKey: 8HAfLX9oICaQRFRS3Q9iHj0M
 #CDN
 CDN:
   # main
-  main: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6 
-  default: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets
+  main: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets
 
   # background effect
-  canvas_ribbon: /js/third-party/canvas_ribbon.js
-  canvas_ribbon_piao: /js/third-party/canvas_ribbon_piao.js
-  typed: https://cdn.jsdelivr.net/npm/typed.js
+  canvas_ribbon: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/canvas_ribbon.min.js
+  canvas_ribbon_piao: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/canvas_ribbon_piao.min.js
+  typed: https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js
 
   # 打字特效
-  activate_power_mode: /js/third-party/activate_power_mode.js
+  activate_power_mode: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/activate_power_mode.min.js
 
   # 鼠標點擊特效
-  fireworks: /js/third-party/fireworks.js
-  click_heart: /js/third-party/click_heart.js
-  ClickShowText: /js/third-party/ClickShowText.js
+  fireworks: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/fireworks.min.js
+  click_heart: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/click_heart.min.js
+  click_show_text: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/click_show_text.min.js
 
   # 流星背景特效
-  meteor: /js/third-party/bg_meteor.js
+  bg_meteor: https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/js/third-party/bg_meteor.min.js
 
   #live2d
   live2d: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@master/live2d.js
@@ -288,15 +290,15 @@ CDN:
   live2d_model: https://cdn.jsdelivr.net/gh/HesperusVenus/live2d@latest/models
 
   #aplayer
-  aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-  aplayer_css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+  aplayer: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js
+  aplayer_css: https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css
   meting: https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js
 
   #dplayer
   dplayer: https://cdn.jsdelivr.net/gh/DIYgod/DPlayer@latest/dist/DPlayer.min.js
-  hls: https://cdn.jsdelivr.net/npm/hls.js@latest
+  hls: https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js
 
   #video
   video: https://cdn.jsdelivr.net/npm/video.js@7.10.1/dist/video.min.js
   video_css: https://cdn.jsdelivr.net/npm/video.js@7.10.1/dist/video-js.css
-  video_contrib_hls: https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js
+  video_contrib_hls: https://cdn.jsdelivr.net/npm/videojs-contrib-hls@latest/dist/videojs-contrib-hls.min.js

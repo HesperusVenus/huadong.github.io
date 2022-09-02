@@ -764,7 +764,6 @@
     }
 }
 
-/*# sourceMappingURL=APlayer.min.css.map*/
 #wpadminbar #wp-admin-bar-wp-statistic-menu .ab-icon:before {
     content: '\f184';
     top: 2px
@@ -2710,29 +2709,26 @@ i.iconfont.hotpost {
     border-bottom: 1px dashed #ddd;
     color: #737373
 }
-
 .entry-content h3,
 .entry-content h4,
 .entry-content h5 {
     padding-left: 16px
 }
 
-.entry-content h2:after {
-    content: "\00B6";
+.entry-content h2{
+    position: relative
+}
+.entry-content h2::before {
+    content: "🌸";
     position: absolute;
-    color: #ff6d6d;
+    top: 6px;
+    left: 0;
     font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
-    padding-left: 6px;
-    font-size: 1.03em
+    font-size: 0.7em
 }
 
-.serif .entry-content h2:after {
-    content: "\00B6";
-    position: absolute;
-    color: #ff6d6d;
-    font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
-    padding-left: 6px;
-    font-size: 1.13em
+.entry-content h2  {
+    padding-left: 20px;
 }
 
 .entry-content h3:after {
@@ -9619,7 +9615,7 @@ img[src*="#in-center"] {
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url("https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/other/wave1.png") repeat-x;
+    background: url("https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/other/wave1.png") repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -9633,7 +9629,7 @@ img[src*="#in-center"] {
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url("https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/img/other/wave2.png") repeat-x;
+    background: url("https://cdn.jsdelivr.net/gh/HesperusVenus/assets@master/assets/images/other/wave2.png") repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
